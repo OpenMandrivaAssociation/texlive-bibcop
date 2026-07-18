@@ -1,5 +1,6 @@
 %global tl_name bibcop
 %global tl_revision 79293
+%global tl_bin_links bibcop:%{_texmfdistdir}/scripts/bibcop/bibcop.pl
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -18,6 +19,8 @@ Requires:	texlive(bibcop.bin)
 Requires:	texlive(iexec)
 Requires:	texlive(pgfopts)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 This LaTeX package checks the quality of your .bib file and emits
